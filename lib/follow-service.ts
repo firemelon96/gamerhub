@@ -62,7 +62,7 @@ export const followUser = async (id: string) => {
   }
 
   if (otherUser.id === self.id) {
-    throw new Error('Cannot follow yourself ');
+    throw new Error('Cannot follow yourself');
   }
 
   const existingFollow = await db.follow.findFirst({
@@ -82,8 +82,8 @@ export const followUser = async (id: string) => {
       followingId: otherUser.id,
     },
     include: {
-      follower: true,
       following: true,
+      follower: true,
     },
   });
 

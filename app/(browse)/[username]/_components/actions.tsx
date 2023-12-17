@@ -34,10 +34,10 @@ export const Actions = ({ isFollowing, userId }: ActionsProps) => {
   };
 
   const onClick = () => {
-    if (!isFollowing) {
-      handleFollow();
-    } else {
+    if (isFollowing) {
       handleUnFollow();
+    } else {
+      handleFollow();
     }
   };
 
