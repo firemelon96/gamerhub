@@ -1,5 +1,5 @@
 import { db } from '@/lib/db';
-import { getSelf } from './auth-service';
+import { getSelf } from '@/lib/auth-service';
 
 export const getRecommended = async () => {
   let userId;
@@ -22,6 +22,11 @@ export const getRecommended = async () => {
             followedBy: {
               some: {
                 followerId: userId,
+              },
+            },
+            blocking: {
+              some: {
+                blockedId: userId,
               },
             },
           },
