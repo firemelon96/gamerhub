@@ -1,5 +1,5 @@
-const Upage = () => {
+const CreatorPage = () => {
   return <div>Your page</div>;
 };
 
-export default Upage;
+export default CreatorPage;
