@@ -12,7 +12,7 @@ export const stringToColor = (str: string) => {
   }
   let color;
   for (let i = 0; i < 3; i++) {
-    const value = (hash >> (i * 8)) & 0xff;
+    color = (hash >> (i * 8)) & 0xff;
   }
 
   return color;
