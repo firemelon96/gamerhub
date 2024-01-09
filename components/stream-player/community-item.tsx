@@ -44,7 +44,7 @@ export const CommunityItem = ({
         isPending && 'opacity-50 pointer-events-none'
       )}
     >
-      <p style={{ color }}>{participantName}</p>
+      <p style={{ color: color }}>{participantName}</p>
       {isHost && !isSelf && (
         <Hint label='Block'>
           <Button
